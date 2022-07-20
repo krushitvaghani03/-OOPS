@@ -1,0 +1,27 @@
+package methodoverriding;
+
+class Xyz1
+{
+	Number A()
+	{
+		System.out.println("Parent Method Called...");
+		return 0;
+	}
+}
+
+public class ReturnType extends Xyz
+{
+	Integer A()
+	{
+		System.out.println("Child Method Called...");
+		return 0;
+	}
+	public static void main(String[] args) {
+		
+		Xyz1 x = new Xyz1();
+		x.A();
+		
+		ReturnType t = new ReturnType();
+		t.A();
+	}
+}

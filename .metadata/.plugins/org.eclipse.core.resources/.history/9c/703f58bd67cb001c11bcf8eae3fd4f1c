@@ -1,0 +1,62 @@
+package com;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import database.DBconnection;
+
+@WebServlet("/reg")
+public class RegistrationController extends HttpServlet
+{
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+	String uname = req.getParameter("uname");
+	String email = req.getParameter("email");
+	String pass = req.getParameter("pass");
+	String adr = req.getParameter("adr");
+	
+	Connection cn = DBconnection.connection();
+	String qry = "insert into data values(?,?,?,?,?)";
+	try {
+		PreparedStatement pw = cn.prepareStatement(qry);
+		pw.setInt(1, 0);
+		pw.setString(2, uname);
+		pw.setString(3, email);
+		pw.setString(4, pass);
+		pw.setString(5, adr);
+		
+		int i = pw.executeUpdate();
+		if(i>0)
+		{
+			PrintWriter pw = resp.getWriter();
+			pw.print("Data Inserted!");
+			RequestDispatcher rs = req.getRequestDispatcher("success.html");
+			rs.forward(req, resp);
+			
+		}
+		else
+		{
+			RequestDispatcher rs = req.getRequestDispatcher("error.html");
+			rs.forward(req, resp);
+		}
+		
+	} catch (SQLException e) {
+		
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	
+	}
+}

@@ -1,0 +1,32 @@
+package abstruct;
+
+interface I1
+{
+	void show();
+	
+	default void X()
+	{
+		System.out.println("Method 1");
+	}
+	
+	static void Y()
+	{
+		System.out.println("Method 2");
+	}
+}
+
+public class Interface implements I1
+{
+	public void show()
+	{
+		System.out.println("Method Called...");
+	}
+	
+	public static void main(String[] args) {
+		
+		Interface i = new Interface();
+		i.show();
+		i.X();
+	    Y();
+	}
+}

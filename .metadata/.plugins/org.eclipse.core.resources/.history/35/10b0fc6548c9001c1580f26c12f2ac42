@@ -1,0 +1,22 @@
+package This;
+
+public class Constructor 
+{
+	public Constructor() 
+	{
+		this();
+		System.out.println("Constructor Called...");
+	}
+	
+	public Constructor(int i)
+	{
+		System.out.println("Parameterized Constructor...");
+	}
+	
+	public static void main(String[] args) {
+		
+		Constructor c = new Constructor(10);
+		
+	}
+	
+}

@@ -1,0 +1,15 @@
+package This;
+
+public class Test1 
+{
+	void m1(Test1 t)
+	{
+		System.out.println("M1 Method");
+	}
+	void m2()
+	{
+		m1(this);
+	}
+	
+	Test1 t = new Test1();
+}

@@ -1,0 +1,17 @@
+package methodoverriding;
+
+class Xyz
+{
+	void A()
+	{
+		System.out.println("Parent Method Called...");
+	}
+}
+
+public class Test extends Xyz
+{
+	void A()
+	{
+		System.out.println("Child Method Called...");
+	}
+}

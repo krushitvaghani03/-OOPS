@@ -1,0 +1,13 @@
+package This;
+
+public class Test 
+{
+	void setval(int a)
+	{
+		
+	}
+	void get()
+	{
+		System.out.println(i);
+	}
+}

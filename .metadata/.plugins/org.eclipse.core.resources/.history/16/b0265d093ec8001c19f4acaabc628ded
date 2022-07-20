@@ -1,0 +1,24 @@
+package abstruct;
+
+abstract public class P1 
+{
+	abstract void show();
+}
+
+class P2 extends P1
+{
+	void show() 
+	{
+		System.out.println("Method Overriding...");
+	}
+	
+	public static void main(String[] args) {
+		
+		P2 p = new P2();
+		p.show();
+	}
+}
+
+
+
+

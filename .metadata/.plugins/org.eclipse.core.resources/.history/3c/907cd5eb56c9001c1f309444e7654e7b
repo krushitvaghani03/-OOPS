@@ -1,0 +1,22 @@
+package Super;
+
+class A
+{
+	int a = 10;
+}
+
+public class Test extends A 
+{
+	int a = 20;
+	void show(int a)
+	{
+		System.out.println(a);
+		System.out.println(this.a);
+	}
+	
+	public static void main(String[] args) {
+		
+		Test t = new Test();
+		t.show(15);
+	}
+}

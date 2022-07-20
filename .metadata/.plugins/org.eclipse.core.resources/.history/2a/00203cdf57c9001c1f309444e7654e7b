@@ -1,0 +1,24 @@
+package Super;
+
+class P
+{
+	public P() 
+	{
+		System.out.println("Parent Constructor" + i);
+	}
+}
+
+public class Constructor extends P
+{
+	public Constructor() 
+	{
+		super();
+		System.out.println("Child Constructor");
+	}
+	
+	public static void main(String[] args) {
+		
+		Constructor c = new Constructor();
+		
+	}
+}

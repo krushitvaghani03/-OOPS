@@ -1,0 +1,17 @@
+package Super;
+
+class X
+{
+	void show()
+	{
+		System.out.println("Parent Method called...");
+	}
+}
+
+public class Method extends X 
+{
+	void Display()
+	{
+		System.out.println("Chilld Method Called...");
+	}
+}

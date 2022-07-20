@@ -1,0 +1,8 @@
+package abstruct;
+
+abstract public class P1 
+{
+	void show();
+}
+
+

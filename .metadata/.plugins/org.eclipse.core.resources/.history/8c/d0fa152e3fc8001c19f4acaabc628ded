@@ -1,0 +1,14 @@
+package abstruct;
+
+interface I1
+{
+	void show();
+}
+
+public class Interface implements I1
+{
+	public void show()
+	{
+		System.out.println("Method Called...");
+	}
+}

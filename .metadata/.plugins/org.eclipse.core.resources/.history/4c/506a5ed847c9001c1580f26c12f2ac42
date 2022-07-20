@@ -1,0 +1,21 @@
+package This;
+
+public class method 
+{
+	void display()
+	{
+		System.out.println("Hello...");
+	}
+	void show()
+	{
+		display();
+	}
+
+	public static void main(String[] args) {
+		
+	
+	method m = new method();
+	m.show();
+	}
+	
+}

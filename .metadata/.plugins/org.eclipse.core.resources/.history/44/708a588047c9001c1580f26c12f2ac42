@@ -1,0 +1,21 @@
+package This;
+
+public class Test 
+{
+	int i;
+	void setval(int i)
+	{
+		i=i;
+	}
+	void get()
+	{
+		System.out.println(i);
+	}
+	
+	public static void main(String[] args) {
+		
+		Test t = new Test();
+		t.setval(10);
+		t.get();
+	}
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Home </h1>
+<a href="Servlet">Servlet Demo</a><br>
+<a href="Second">Second Servlet</a><br>
+<a href="ThirdServlet">Third Servlet</a><br>
+<a href="registration.html">Registration</a>
+<a href="login.html">Login</a>
+</body>
+</html>

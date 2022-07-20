@@ -1,0 +1,13 @@
+package This;
+
+public class method 
+{
+	void display()
+	{
+		System.out.println("Hello...");
+	}
+	void show()
+	{
+		display();
+	}
+}
